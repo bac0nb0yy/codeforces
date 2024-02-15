@@ -15,7 +15,7 @@ for _ in range(5):
     dp += [list(map(int, input().split()))]
 
 best = 0
-for perm in list(itertools.permutations([0, 1, 2, 3, 4])):
+for perm in list(itertools.permutations(range(5))):
     best = max(best, calculate_happiness(dp, perm))
 
 print(best)
